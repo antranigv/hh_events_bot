@@ -30,4 +30,5 @@ use Mix.Config
 #     import_config "#{Mix.env()}.exs"
 
 config :hh_events_bot,
-  token: System.get_env("HHEVENTBOT_TOKEN")
+  token: System.get_env("HHEVENTBOT_TOKEN"),
+  msg:  System.get_env("HHEVENTBOT_MSG")

@@ -8,7 +8,7 @@ defmodule HHEventsBot.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      {HHEventsBot.Server, Application.get_env(:hh_events_bot, :token)}
+      {HHEventsBot.Server, [Application.get_env(:hh_events_bot, :token), Application.get_env(:hh_events_bot, :msg)]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
