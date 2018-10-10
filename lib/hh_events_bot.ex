@@ -83,7 +83,7 @@ defmodule HHEventsBot do
   def decode_resp(resp) do
     case resp.status_code do
       200 -> resp.body |> Poison.decode! |> Map.get("result")
-      err -> Logger.warn("got status code #{err}")
+      err -> Logger.warn("got status code #{err}"); do_exit();
     end
   end
 
